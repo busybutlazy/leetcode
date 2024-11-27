@@ -10,6 +10,10 @@ class Solution:
         #     return winner_candidates.pop()
         # else:
         #     return -1
+        
+        
+        # It is much faster to use []*n instead of set([ for ]).
+        
         winner_candidates=[0]*n
         for edge in edges:
             winner_candidates[edge[1]]+=1

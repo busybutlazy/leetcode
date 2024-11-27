@@ -38,7 +38,25 @@
 # li=[1,2,5,8,7,5,2,3,4,8,6,45,89,53,24,8532,452,865,452]
 # li.sort()
 # print(get_min_min(li,8531))
-import math 
-import math as m
+import time
+
+def test1(num):
+    for _ in range(num):
+        li=[0]*num
+
+def test2(num):
+    for _ in range(num):
+        s=set([0 for _ in range(num)])
+
+def time_tester(fun,num):
+    start_time = time.time()
+    fun(num)
+    end_time=time.time()
+    execution_time = end_time - start_time
+
+    print(f"Execution time : {execution_time} seconds")
+num=50000
+time_tester(test1,num)
+time_tester(test2,num)
 
 #3432 34
